@@ -1,2 +1,20 @@
-<h1>Le 6ième Continent</h1>
-<p>Cuisine du Monde</p>
+<!-- app/views/pages/home.html.erb -->
+<body>
+  <header>
+    <!-- Votre contenu de bannière, comme le logo, les titres, etc. -->
+    <img src="votre_logo.png" alt="Logo">
+    <h1>Le 6ième Continent</h1>
+    <h3>Cuisine du Monde</h3>
+  </header>
+
+  <main>
+    <!-- Le reste du contenu de votre page d'accueil -->
+    <!-- app/views/pages/home.html.erb -->
+
+<!-- Liens vers les différentes sections -->
+<%= link_to "Événements", evenements_path %><br>
+<%= link_to "Plats Signatures", plats_path %><br>
+<%= link_to "Photos", photos_path %><br>
+
+  </main>
+</body>
