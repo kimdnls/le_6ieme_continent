@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+/* app/assets/stylesheets/application.css */
+
+body {
+  background-image: url('C:\Users\kimda\Downloads\images.jpg');
+  background-size: cover; /* Pour ajuster la taille de l'image à la taille de la fenêtre */
+  background-position: center; /* Pour centrer l'image */
+}

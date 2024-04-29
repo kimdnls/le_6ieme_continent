@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'evenements/index'
+  get 'evenements/show'
   get 'pages/home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,4 +11,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get 'pages/home'
+  get 'plats', to: 'plats#index'
+  get 'photos', to: 'photos#index'
+  get 'evenements', to: 'evenements#index'
 end
