@@ -1,0 +1,11 @@
+.invisible-button {
+  border: none;
+  background-color: transparent;
+  color: #000; /* Couleur du texte */
+  text-decoration: none; /* Pour supprimer le soulignement du lien */
+  cursor: pointer; /* Pour indiquer que le lien est cliquable */
+}
+
+.invisible-button:hover {
+  color: #00f; /* Couleur du texte au survol */
+}
