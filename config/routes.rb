@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'evenements/index'
   get 'evenements/show'
-  get 'pages/home'
+  get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get 'pages/home'
+  get 'home', to: 'home#index'
   get 'plats', to: 'plats#index'
   get 'photos', to: 'photos#index'
   get 'evenements', to: 'evenements#index'
