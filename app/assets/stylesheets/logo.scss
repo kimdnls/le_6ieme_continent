@@ -1,0 +1,30 @@
+.et_pb_menu_inner_container>.et_pb_menu__logo-wrap {
+  width: auto;
+  max-width: 100%;
+}
+
+.et_pb_menu__logo-wrap {
+  margin: 0 auto;
+}
+
+.et_pb_menu--style-centered .et_pb_menu__logo-wrap {
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  // -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  // -ms-flex-align: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute; /* Positionnement absolu par rapport à la bannière */
+  top: 10px; /* Ajustez la position verticale du logo selon vos besoins */
+  left: 10px; /* Ajustez la position horizontale du logo selon vos besoins */
+  width: 50px; /* Ajustez la taille du logo selon vos besoins */
+  height: auto; /* Garde les proportions du logo */
+  z-index: 1; /* Pour placer le logo au-dessus du texte de la bannière */
+}

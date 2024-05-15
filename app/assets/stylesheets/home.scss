@@ -1,11 +1,33 @@
 .invisible-button {
   border: none;
   background-color: transparent;
-  color: #000; /* Couleur du texte */
+  color: #fdfbfb; /* Couleur du texte */
   text-decoration: none; /* Pour supprimer le soulignement du lien */
   cursor: pointer; /* Pour indiquer que le lien est cliquable */
 }
 
 .invisible-button:hover {
-  color: #00f; /* Couleur du texte au survol */
+  color: rgb(88, 88, 104); /* Couleur du texte au survol */
 }
+
+a, address, body, center, code, div, dl, dt, em, fieldset, form, h1, h2, h3, html, iframe, img, ins, label, legend, li, object, p, s, span, strong, tt, u, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+}
+
+// .banner {
+//   background-image: url('https://media.istockphoto.com/id/1146261080/fr/photo/chef-finissant-la-salade-saine-sur-une-assiette-noire-avec-une-pincettes-presque-pr%C3%AAt-%C3%A0-le.jpg?s=1024x1024&w=is&k=20&c=89sh5Vo15v4csWoIGi3fFA6a_ymUqsPdLcLvZzgqgWs=');
+//   background-size: cover;
+//   background-position: center;
+//   height: 300px; /* Ajustez la hauteur selon vos besoins */
+//   text-align: center; /* Pour centrer le contenu de la bannière */
+//   color: white; /* Couleur du texte */
+//   padding-top: 100px; /* Pour décaler le contenu vers le bas */
+// }
