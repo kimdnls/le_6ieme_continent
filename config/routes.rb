@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get 'plats', to: 'plats#index'
   get 'photos', to: 'photos#index'
   get 'evenements', to: 'evenements#index'
+  get 'contact', to: 'contact#index'
 end

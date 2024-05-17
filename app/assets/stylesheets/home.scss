@@ -22,6 +22,15 @@ a, address, body, center, code, div, dl, dt, em, fieldset, form, h1, h2, h3, htm
   background: 0 0;
 }
 
+.photo {
+  text-align: center; /* Pour centrer horizontalement le contenu de la div */
+  margin-top: 20px; /* Ajustez la marge si nécessaire */
+}
+
+.photo img {
+  max-width: 70%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+}
+
 // .banner {
 //   background-image: url('https://media.istockphoto.com/id/1146261080/fr/photo/chef-finissant-la-salade-saine-sur-une-assiette-noire-avec-une-pincettes-presque-pr%C3%AAt-%C3%A0-le.jpg?s=1024x1024&w=is&k=20&c=89sh5Vo15v4csWoIGi3fFA6a_ymUqsPdLcLvZzgqgWs=');
 //   background-size: cover;
