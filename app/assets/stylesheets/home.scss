@@ -11,6 +11,10 @@
   color: rgb(88, 88, 104); /* Couleur du texte au survol */
 }
 
+body {
+  margin: 0;
+}
+
 a {
   font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
   text-transform: uppercase;
@@ -26,11 +30,33 @@ a {
   letter-spacing: 0.1em;
 }
 
-.tataki {
-  text-align: center; /* Pour centrer horizontalement le contenu de la div */
-  margin-top: 20px; /* Ajustez la marge si nécessaire */
+/* Centrer le conteneur parent */
+.image-container {
+  display: flex;
+  justify-content: center;  /* Centrer horizontalement */
+  align-items: center;      /* Centrer verticalement */
+  // height: 100vh;            /* S'assurer que le conteneur prend toute la hauteur de la page */
 }
 
-.tataki {
-  max-width: 70%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+/* Style de l'image */
+.centered-image {
+  max-width: 70%;  /* Ajustez la largeur maximale selon vos besoins */
+  height: auto;    /* Conserver les proportions de l'image */
 }
+
+.entry-title {
+  font-weight: 200;
+  color: #2d2d2d;
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  padding-top: 50px;
+  padding-left: 230px;
+  padding-right: 160px;
+}
+
+
+// .tataki {
+//   text-align: center; /* Pour centrer horizontalement le contenu de la div */
+//   margin-top: 20px; /* Ajustez la marge si nécessaire */
+//   max-width: 60%;
+// }
