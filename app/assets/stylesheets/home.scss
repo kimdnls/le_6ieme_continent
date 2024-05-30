@@ -31,6 +31,20 @@ a, address, body, center, code, div, dl, dt, em, fieldset, form, h1, h2, h3, htm
   max-width: 70%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
 }
 
+/* Centrer le conteneur parent */
+.logo-container {
+  text-align: center;
+  padding: 20px;  /* Optionnel : pour ajouter de l'espace autour de l'image */
+}
+
+/* Style de l'image */
+.logo {
+  max-width: 200px;
+  height: auto;
+  display: inline-block; /* Pour que l'image soit centrée avec text-align */
+}
+
+
 // .banner {
 //   background-image: url('https://media.istockphoto.com/id/1146261080/fr/photo/chef-finissant-la-salade-saine-sur-une-assiette-noire-avec-une-pincettes-presque-pr%C3%AAt-%C3%A0-le.jpg?s=1024x1024&w=is&k=20&c=89sh5Vo15v4csWoIGi3fFA6a_ymUqsPdLcLvZzgqgWs=');
 //   background-size: cover;
