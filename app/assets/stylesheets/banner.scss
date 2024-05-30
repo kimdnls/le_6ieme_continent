@@ -2,10 +2,8 @@ div.et_pb_section.et_pb_section_1_tb_header {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%) !important;
 }
 
-.et_pb_section_1_tb_header.et_pb_section
-{  padding-top: 20px;
-  padding-bottom: 0;
-  background-color: #212226 !important;
+.et_pb_section_1_tb_header.et_pb_section {
+  background-color: black !important;
 }
 
 .et_pb_section_1_tb_header {
@@ -37,11 +35,9 @@ div.et_pb_section.et_pb_section_1_tb_header {
 
 
 .banner-links {
-  margin-top: 20px; /* Ajustez la marge au-dessus des liens si nécessaire */
   text-align: center;
 }
 
 .banner-links a {
   display: inline-block; /* Permet aux liens d'être alignés horizontalement */
-  margin: 0 10px; /* Ajustez l'espacement entre les liens si nécessaire */
 }

@@ -19,3 +19,15 @@
   // -ms-flex-align: center;
   align-items: center;
 }
+
+.logo-container {
+  text-align: center;
+}
+
+/* Style de l'image */
+.logo {
+  max-width: 200px;
+  margin-top: 10px;
+  height: auto;
+  display: inline-block; /* Pour que l'image soit centrée avec text-align */
+}
