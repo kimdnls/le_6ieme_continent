@@ -19,12 +19,3 @@
   // -ms-flex-align: center;
   align-items: center;
 }
-
-.logo {
-  position: absolute; /* Positionnement absolu par rapport à la bannière */
-  top: 10px; /* Ajustez la position verticale du logo selon vos besoins */
-  left: 10px; /* Ajustez la position horizontale du logo selon vos besoins */
-  width: 50px; /* Ajustez la taille du logo selon vos besoins */
-  height: auto; /* Garde les proportions du logo */
-  z-index: 1; /* Pour placer le logo au-dessus du texte de la bannière */
-}
