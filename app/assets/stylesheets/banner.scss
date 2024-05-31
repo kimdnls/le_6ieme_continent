@@ -1,38 +1,26 @@
-div.et_pb_section.et_pb_section_1_tb_header {
+.banner_sticky {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%) !important;
-}
+  position: fixed;
+  top: 0;             /* Positionne l'élément en haut de la page */
+  left: 0;            /* Positionne l'élément sur le bord gauche */
+  width: 100%;        /* Prend toute la largeur de la page */
+  z-index: 1000;      /* Assure que la bannière est au-dessus des autres éléments */
+  }
 
-.et_pb_section_1_tb_header.et_pb_section {
+.banner_sticky {
   background-color: black !important;
 }
 
-.et_pb_section_1_tb_header {
+.banner_sticky {
   margin-bottom: 0;
   z-index: 100000;
-  position: relative;
+  // position: relative;
 }
 
-.et_pb_section {
-   background-position: 50%;
+.banner_sticky {
+  background-position: 50%;
   background-size: cover;
 }
-
-.et_pb_menu__wrap {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.et_pb_menu .et_pb_menu__wrap {
-  -webkit-box-flex: 1;
-  flex: 1 1 auto;
-  display: flex;
-  -webkit-box-align: stretch;
-  align-items: stretch;
-  flex-wrap: wrap;
-  opacity: 1;
-}
-
 
 .banner-links {
   text-align: center;
@@ -40,4 +28,8 @@ div.et_pb_section.et_pb_section_1_tb_header {
 
 .banner-links a {
   display: inline-block; /* Permet aux liens d'être alignés horizontalement */
+}
+
+.description_title {
+  padding-top: 150px;
 }
