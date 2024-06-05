@@ -1,1 +1,22 @@
-<h3>Notre spot au parc 2000 à Bureaux and Co</h3>
+ <div class="banner_sticky" style>
+  <div class="logo-container">
+   <%= link_to root_path do %>
+     <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo' %>
+    <% end %>
+  </div>
+    <div class="banner-links">
+      <%= link_to "Lunch", lunch_path, class: "invisible-button" %>
+      <%= link_to "Événements", evenements_path, class: "invisible-button" %>
+      <%= link_to "Plats Signatures", plats_path, class: "invisible-button" %>
+      <%= link_to "Photos", photos_path, class: "invisible-button" %>
+      <%= link_to "Contact", contact_path, class: "invisible-button" %>
+    </div>
+</div>
+ <div class="description_title">
+    <h1 class="entry-title">Notre spot au parc 2000 à Bureaux and Co</h1>
+    <h2>Du Lundi à Vendredi</h2>
+    <h2>12 - 14 heures</h2>
+ </div>
+    <div class="image-container">
+      <%= image_tag 'lunch.jpg', alt: 'Bowl Image', class: 'centered-image' %>
+    </div>

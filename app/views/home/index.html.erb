@@ -1,6 +1,8 @@
 <div class="banner_sticky" style>
   <div class="logo-container">
+    <%= link_to root_path do %>
      <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo' %>
+    <% end %>
   </div>
     <div class="banner-links">
       <%= link_to "Lunch", lunch_path, class: "invisible-button" %>
@@ -17,6 +19,3 @@
       <%= image_tag 'tataki.jpg', alt: 'Tataki Image', class: 'centered-image' %>
     </div>
     <h1 class="entry-title">Notre cuisine gastro-nomade se demarque par ses influences asiatiques, mediterranien et orientales. Une cuisine passionnée par le voyage, une cuisine de partage, basée aux produits de saison & locaux.</h1>
-
-        <%# <h3>Cuisine du Monde</h3>
-       <p>Explorez nos événements, plats signatures et photos.</p> %>
