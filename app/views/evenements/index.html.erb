@@ -1,4 +1,17 @@
-<h1>Nos prochains événements</h1>
+ <div class="banner_sticky" style>
+    <div class="logo-container">
+      <%= link_to root_path do %>
+        <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo' %>
+      <% end %>
+    </div>
+  <div class="banner-links">
+    <%= link_to "Lunch", lunch_path, class: "invisible-button" %>
+    <%= link_to "Événements", evenements_path, class: "invisible-button" %>
+    <%= link_to "Plats Signatures", plats_path, class: "invisible-button" %>
+    <%= link_to "Photos", photos_path, class: "invisible-button" %>
+    <%= link_to "Contact", contact_path, class: "invisible-button" %>
+  </div>
+</div><h1>Nos prochains événements</h1>
 <h2>Saison 2024:</h2>
 <ul>26/05 Chateau d'Ô - Montpellier</ul>
 <ul>du 24/06 au 31/08 Les marchées nocturnes du lundi soir - Pignan</ul>
