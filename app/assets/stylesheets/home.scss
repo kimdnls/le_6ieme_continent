@@ -1,15 +1,3 @@
-.invisible-button {
-  border: none;
-  background-color: transparent;
-  color: #fdfbfb; /* Couleur du texte */
-  text-decoration: none; /* Pour supprimer le soulignement du lien */
-  cursor: pointer; /* Pour indiquer que le lien est cliquable */
-  font-weight: lighter;
-}
-
-.invisible-button:hover {
-  color: rgb(88, 88, 104); /* Couleur du texte au survol */
-}
 
 body {
   margin: 0;
@@ -17,6 +5,7 @@ body {
 
 a {
   font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+  font-weight: lighter;
   text-transform: uppercase;
   margin: 0;
   padding: 31px;
@@ -54,10 +43,3 @@ a {
   padding-left: 230px;
   padding-right: 160px;
 }
-
-
-// .tataki {
-//   text-align: center; /* Pour centrer horizontalement le contenu de la div */
-//   margin-top: 20px; /* Ajustez la marge si nécessaire */
-//   max-width: 60%;
-// }

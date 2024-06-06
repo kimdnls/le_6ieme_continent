@@ -25,7 +25,7 @@
 .contact-email {
   color: #CB9400;
   font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .contact-title {
@@ -82,18 +82,9 @@
 }
 
 .nav-item {
-  margin: 0 10px; /* Optional: space between nav items */
+  margin: 0 15px; /* Optional: space between nav items */
 }
 
 .navbar-collapse {
   justify-content: center;
-}
-
-.nav-link {
-  border: none;
-  background-color: transparent;
-  color: #fdfbfb; /* Couleur du texte */
-  text-decoration: none; /* Pour supprimer le soulignement du lien */
-  cursor: pointer; /* Pour indiquer que le lien est cliquable */
-  font-weight: lighter;
 }
