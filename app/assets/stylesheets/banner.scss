@@ -1,40 +1,3 @@
-.banner_sticky {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%) !important;
-  position: fixed;
-  top: 0;             /* Positionne l'élément en haut de la page */
-  left: 0;            /* Positionne l'élément sur le bord gauche */
-  width: 100%;        /* Prend toute la largeur de la page */
-  z-index: 1000;      /* Assure que la bannière est au-dessus des autres éléments */
-  }
-
-
-.banner_sticky {
-  margin-bottom: 0;
-  z-index: 100000;
-  // position: relative;
-}
-
-.banner_sticky {
-  background-position: 50%;
-  background-size: cover;
-}
-
-.banner-links {
-  text-align: center;
-}
-
-.banner-links a {
-  display: inline-block; /* Permet aux liens d'être alignés horizontalement */
-}
-
-.description_title {
-  padding-top: 150px;
-}
-
-.banner_sticky.navbar.navbar-dark.bg-dark {
-  background-color: black !important;
-}
-
 .nav-link.invisible-button {
   font-weight: lighter;
   color: #fdfbfb; /* Couleur du texte */
@@ -49,32 +12,4 @@
   color: rgb(88, 88, 104); /* Couleur du texte au survol */
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-}
-
-
-.top-banner {
-  background-color: white;
-  padding: 10px 0;
-  text-align: right;
-  border-bottom: 1px solid #e0e0e0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.social-icon {
-  color: #000;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.social-icon:hover {
-  color: #949eaa; /* Couleur au survol, ajustez selon vos préférences */
-}
-
-/* Assurez-vous que le contenu principal commence après la bannière */
-body {
-  padding-top: 50px; /* Ajustez en fonction de la hauteur de la bannière */
 }
