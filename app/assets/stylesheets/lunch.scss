@@ -1,17 +1,17 @@
-.event-banner {
+.lunch-banner {
   width: 100%;
   position: relative;
   overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
 }
 
-.event-image {
+.lunch-image {
   width: 100%;
   object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
   display: block;
   position: relative;
 }
 
-.event-banner::before {
+.lunch-banner::before {
   content: '';
   position: absolute;
   top: 0;
