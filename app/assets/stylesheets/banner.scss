@@ -50,3 +50,31 @@
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
+
+
+.top-banner {
+  background-color: white;
+  padding: 10px 0;
+  text-align: right;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.social-icon {
+  color: #000;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  color: #949eaa; /* Couleur au survol, ajustez selon vos préférences */
+}
+
+/* Assurez-vous que le contenu principal commence après la bannière */
+body {
+  padding-top: 50px; /* Ajustez en fonction de la hauteur de la bannière */
+}
