@@ -1,23 +1,59 @@
-.lunch-banner {
+.event-banner {
   width: 100%;
   position: relative;
   overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
 }
 
-.lunch-image {
+.event-image {
   width: 100%;
   object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
   display: block;
   position: relative;
 }
 
-.lunch-banner::before {
+.event-banner::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
   z-index: 1;
+}
+
+
+.lunch-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.lunch-banner .lunch-image {
+  filter: brightness(50%); /* Assombrit l'image pour que le texte soit plus lisible */
+}
+
+.lunch-text {
+  text-align: center;
+  margin-top: 100px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  font-weight: 200;
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.lunch-text h1, .lunch-text h2, .lunch-text p {
+  color: white;
+  margin: 10px 0;
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+}
+
+.lunch-text p {
+  list-style-type: none;
+  padding: 0;
 }

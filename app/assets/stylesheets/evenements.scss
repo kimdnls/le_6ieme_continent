@@ -18,6 +18,40 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
   z-index: 1;
+}
+
+
+.event-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.event-banner .contact-image {
+  filter: brightness(50%); /* Assombrit l'image pour que le texte soit plus lisible */
+}
+
+.event-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  font-weight: 200;
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.event-text h1, .event-text h2, .event-text ul {
+  color: white;
+  margin: 10px 0;
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+}
+
+.event-text ul {
+  list-style-type: none;
+  padding: 0;
 }

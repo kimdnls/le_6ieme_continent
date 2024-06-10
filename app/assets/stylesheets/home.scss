@@ -17,6 +17,7 @@ a {
   vertical-align: baseline;
   background: 0 0;
   letter-spacing: 0.1em;
+  padding: 0px;
 }
 
 /* Centrer le conteneur parent */
@@ -24,6 +25,7 @@ a {
   display: flex;
   justify-content: center;  /* Centrer horizontalement */
   align-items: center;      /* Centrer verticalement */
+  padding-top: 180px;;
   // height: 100vh;            /* S'assurer que le conteneur prend toute la hauteur de la page */
 }
 

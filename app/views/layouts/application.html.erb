@@ -19,10 +19,9 @@
       z-index: 1000;
     }
 
-    .banner_sticky .navbar {
+    .banner_sticky.navbar.navbar-dark.bg-dark.fixed-top.black{
       background-color: black !important;
     }
-
     .logo {
       max-width: 200px;
       height: auto;
@@ -30,8 +29,20 @@
     }
 
     .social-icons {
-      color: #fff;
+      color: #999;
       font-size: 1.2em;
+    }
+
+    .social-icons:hover {
+      color: #EEEEEE;
+      }
+
+    .fa-facebook-f:before {
+      margin-right: 20px;
+    }
+
+    .fa-instagram:before {
+      margin-right: 10px;
     }
 
     .social-icons a {
@@ -47,6 +58,22 @@
     .banner_sticky.black {
       top: 40px; /* Hauteur de la bannière blanche */
     }
+
+  .nav-link.invisible-button {
+  font-weight: lighter;
+  color: #fdfbfb; /* Couleur du texte */
+  text-decoration: none; /* Pour supprimer le soulignement du lien */
+  cursor: pointer; /* Pour indiquer que le lien est cliquable */
+  font-size: 14px;
+  padding: 31px 0px;
+  font-weight: lighter;
+}
+
+.nav-link.invisible-button:hover {
+  color: rgb(88, 88, 104); /* Couleur du texte au survol */
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
   </style>
 </head>
 
