@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,11 +20,12 @@
       z-index: 1000;
     }
 
-    .banner_sticky.navbar.navbar-dark.bg-dark.fixed-top.black{
+    .banner_sticky.navbar.navbar-dark.bg-dark.fixed-top.black {
       background-color: black !important;
     }
+
     .logo {
-      max-width: 200px;
+      max-width: 160px;
       height: auto;
       display: inline-block;
     }
@@ -35,7 +37,7 @@
 
     .social-icons:hover {
       color: #EEEEEE;
-      }
+    }
 
     .fa-facebook-f:before {
       margin-right: 20px;
@@ -49,31 +51,29 @@
       margin-left: 10px;
     }
 
-    /* Ajout d'un peu d'espace pour que la bannière blanche ne soit pas masquée */
     .content {
-      padding-top: 100px; /* Ajustez en fonction de la hauteur de la bannière noire */
+      padding-top: 100px;
     }
 
-    /* Décalage de la bannière noire */
     .banner_sticky.black {
-      top: 40px; /* Hauteur de la bannière blanche */
+      top: 40px;
     }
 
-  .nav-link.invisible-button {
-  font-weight: lighter;
-  color: #fdfbfb; /* Couleur du texte */
-  text-decoration: none; /* Pour supprimer le soulignement du lien */
-  cursor: pointer; /* Pour indiquer que le lien est cliquable */
-  font-size: 14px;
-  padding: 31px 0px;
-  font-weight: lighter;
-}
+    .nav-link.invisible-button {
+      font-weight: 200;
+      font-family: 'Poppins', sans-serif;
+      color: white !important;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 14px 0px;
+    }
 
-.nav-link.invisible-button:hover {
-  color: rgb(88, 88, 104); /* Couleur du texte au survol */
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-}
+    .nav-link.invisible-button:hover {
+      color: rgb(88, 88, 104);
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
+    }
   </style>
 </head>
 
@@ -93,30 +93,35 @@
   </div>
 
   <!-- Bannière noire -->
-  <div class="banner_sticky navbar navbar-dark bg-dark fixed-top black">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top black banner_sticky">
     <div class="container-fluid text-center">
-      <div class="row w-100">
-        <div class="col-12">
-          <div class="logo-container text-center">
-            <%= link_to root_path do %>
-              <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo mx-auto d-block' %>
-            <% end %>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="navbar-nav justify-content-center">
-            <ul class="navbar-nav">
-              <li class="nav-item"><%= link_to "Lunch", lunch_path, class: "nav-link invisible-button" %></li>
-              <li class="nav-item"><%= link_to "Événements", evenements_path, class: "nav-link invisible-button" %></li>
-              <li class="nav-item"><%= link_to "Plats Signatures", plats_path, class: "nav-link invisible-button" %></li>
-              <li class="nav-item"><%= link_to "Photos", photos_path, class: "nav-link invisible-button" %></li>
-              <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link invisible-button" %></li>
-            </ul>
-          </div>
-        </div>
+      <a class="navbar-brand" href="<%= root_path %>">
+        <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo mx-auto d-block' %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to "Lunch", lunch_path, class: "nav-link invisible-button" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Événements", evenements_path, class: "nav-link invisible-button" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Plats Signatures", plats_path, class: "nav-link invisible-button" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Photos", photos_path, class: "nav-link invisible-button" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", contact_path, class: "nav-link invisible-button" %>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 
   <!-- Contenu principal -->
   <div class="content">
@@ -124,5 +129,8 @@
   </div>
 
   <%= javascript_include_tag 'application' %>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

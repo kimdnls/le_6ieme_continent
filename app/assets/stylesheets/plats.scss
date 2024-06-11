@@ -1,8 +1,80 @@
+/* Import Bootstrap */
+@import "bootstrap";
+
+/* Custom Styles */
 .entry-text-center {
   font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
   font-weight: 200;
   color: #2d2d2d;
-  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
   font-size: 26px;
-  text-align: center;
+  padding-top: 50px;
+  padding-left: 230px;
+  padding-right: 160px;
+}
+
+.contact-info {
+  color: #2d2d2d;
+  font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+}
+
+.platsignature-title {
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+  font-weight: 200;
+  padding-bottom: 30px;
+}
+
+.platsignature-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+}
+
+.platsignature-image {
+  width: 100%;
+  object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
+  display: block;
+  position: relative;
+}
+
+.platsignature-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+/* Responsive adjustments for .entry-text-center */
+@media (max-width: 768px) {
+  .entry-text-center {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+  }
+}
+
+/* Center logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Adjust navbar items */
+.navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-item {
+  margin: 0 15px; /* Optional: space between nav items */
+}
+
+.navbar-collapse {
+  justify-content: center;
 }

@@ -2,22 +2,24 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lunch Page</title>
+  <title>Contact Page</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
+  <!-- Contact Banner -->
  <div class="lunch-banner">
     <%= image_tag 'lunch.jpg', alt: 'Lunch Image', class: 'lunch-image img-fluid w-100' %>
   </div>
   <!-- Contact Information -->
-  <div class="lunch-text">
-    
-      <div class="container my-5 lunch-container">
-        <h1 class="contact-title">Notre spot au parc 2000 à Bureaux and Co</h1>
-        <p>Du Lundi à Vendredi</p>
-        <p>12 - 14 heures</p>
-        <p>à emporter ou sur place</p>
+  <div class="container my-5 lunch-container text-center">
+    <div class="row justify-content-center">
+       <div class="col-12">
+         <h1 class="lunch-title">Notre spot au parc 2000 à Bureaux and Co</h1>
+          <p>Du Lundi à Vendredi</p>
+          <p>12 - 14 heures</p>
+          <h2 class="orange">à emporter ou sur place</h2>
       </div>
+    </div>
   </div>
 
   <%= javascript_include_tag 'application' %>

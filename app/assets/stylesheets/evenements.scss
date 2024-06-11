@@ -8,7 +8,6 @@
   width: 100%;
   object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
   display: block;
-  position: relative;
 }
 
 .event-banner::before {
@@ -20,13 +19,6 @@
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
   z-index: 1;
-}
-
-
-.event-banner {
-  position: relative;
-  text-align: center;
-  color: white;
 }
 
 .event-banner .contact-image {
@@ -41,17 +33,32 @@
   width: 100%;
   padding: 20px;
   font-weight: 200;
-  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
   font-size: 20px;
+  z-index: 2; /* Assurez-vous que le texte est au-dessus de l'image et du dégradé */
+  text-align: center;
+
 }
 
 .event-text h1, .event-text h2, .event-text ul {
-  color: white;
+  color: white !important;
   margin: 10px 0;
   font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+}
+
+.event-text h1 {
+  margin-bottom: 20px; /* Ajoutez plus d'espace sous le titre principal */
+}
+
+.event-text h2 {
+  margin-bottom: 35px; /* Ajoutez plus d'espace sous le sous-titre */
 }
 
 .event-text ul {
   list-style-type: none;
   padding: 0;
+  margin: 10px 0; /* Ajoutez de l'espace entre les éléments de la liste */
+}
+
+.event-text ul li {
+  margin-bottom: 10px; /* Ajoutez de l'espace entre les éléments de la liste */
 }
