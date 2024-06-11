@@ -6,11 +6,22 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
-  <div class="description_title">
-    <h1 class="entry-title">Le 6ième Continent vous offre un voyage culinaire, de la streetfood à la bistronomie</h1>
+
+  <div class="home-banner">
+    <%= image_tag 'home.png', alt: 'Home Image', class: 'home-image img-fluid w-100' %>
   </div>
-    <div class="image-container">
-      <%= image_tag 'tataki.jpg', alt: 'Tataki Image', class: 'centered-image' %>
+  <!-- Contact Information -->
+  <div class="container my-5 tataki-container text-center">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h1 class="entry-title">Le 6ième Continent vous offre un voyage culinaire</h1>
+          <h2>de la Streetfood à la Bistronomie</h2>
+         <p>Notre cuisine gastro-nomade se demarque par ses influences asiatiques, mediterranien et orientales.</p>
+         <p>Une cuisine passionnée par le voyage, une cuisine de partage, basée aux produits de saison & locaux.</p>
+        </div>
+      </div>
     </div>
-    <h1 class="entry-title">Notre cuisine gastro-nomade se demarque par ses influences asiatiques, mediterranien et orientales. Une cuisine passionnée par le voyage, une cuisine de partage, basée aux produits de saison & locaux.</h1>
+
+  <%= javascript_include_tag 'application' %>
 </body>
+</html>
