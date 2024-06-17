@@ -11,75 +11,88 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
   <style>
-    .banner_sticky {
-      background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
+body {
+  padding-top: 180px; /* Ajustez la valeur pour laisser suffisamment d'espace pour les bannières */
+}
 
-    .banner_sticky.navbar.navbar-dark.bg-dark.fixed-top.black {
-      background-color: black !important;
-    }
+.top-banner {
+  z-index: 1001; /* Assurez-vous que la bannière blanche reste au-dessus */
+  height: 40px; /* Ajustez selon la hauteur souhaitée pour la bannière blanche */
+}
 
-    .logo {
-      max-width: 160px;
-      height: auto;
-      display: inline-block;
-    }
+.banner_sticky {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%);
+  position: fixed;
+  background-color: black;
+  top: 20px; /* Ajustez cette valeur pour correspondre à la hauteur de la bannière blanche */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px; /* Ajustez cette valeur selon vos besoins */
+}
 
-    .social-icons {
-      color: #999;
-      font-size: 1.2em;
-    }
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .social-icons:hover {
-      color: #EEEEEE;
-    }
+.logo {
+  max-width: 160px;
+  height: auto;
+}
 
-    .fa-facebook-f:before {
-      margin-right: 20px;
-    }
+.social-icons {
+  color: #999;
+  font-size: 1.2em;
+}
 
-    .fa-instagram:before {
-      margin-right: 10px;
-    }
+.social-icons:hover {
+  color: #EEEEEE;
+}
 
-    .social-icons a {
-      margin-left: 10px;
-    }
+.fa-facebook-f:before {
+  margin-right: 20px;
+}
 
-    .content {
-      padding-top: 100px;
-    }
+.fa-instagram:before {
+  margin-right: 10px;
+}
 
-    .banner_sticky.black {
-      top: 40px;
-    }
+.social-icons a {
+  margin-left: 10px;
+}
 
-    .nav-link.invisible-button {
-      font-weight: 200;
-      font-family: 'Poppins', sans-serif;
-      color: white !important;
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 14px;
-      padding: 14px 0px;
-    }
+.content {
+  padding-top: 10px; /* Ajustez cette valeur selon la hauteur de votre logo et de la navbar */
+}
 
-    .nav-link.invisible-button:hover {
-      color: rgb(88, 88, 104);
-      transition-duration: 0.4s;
-      transition-timing-function: ease-in-out;
-    }
+.nav-link.invisible-button {
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+  color: white !important;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 14px 0px;
+}
+
+.nav-link.invisible-button:hover {
+  color: rgb(88, 88, 104);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
   </style>
 </head>
 
 <body>
+
   <!-- Bannière blanche -->
-  <div class="container-fluid bg-white border-bottom fixed-top">
+  <div class="container-fluid bg-white border-bottom fixed-top top-banner">
     <div class="row">
       <div class="col text-right py-2">
         <a href="https://www.facebook.com" target="_blank" class="social-icons">
@@ -92,12 +105,14 @@
     </div>
   </div>
 
-  <!-- Bannière noire -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top black banner_sticky">
-    <div class="container-fluid text-center">
-      <a class="navbar-brand" href="<%= root_path %>">
-        <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo mx-auto d-block' %>
+  <!-- Bannière noire avec logo centré -->
+  <div class="banner_sticky">
+    <div class="logo-container">
+      <a href="<%= root_path %>">
+        <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo' %>
       </a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black w-100">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -120,8 +135,8 @@
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
   <!-- Contenu principal -->
   <div class="content">
@@ -132,5 +147,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

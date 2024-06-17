@@ -1,19 +1,19 @@
 @import "bootstrap";
 
-.event-banner {
+.lunch-banner {
   width: 100%;
   position: relative;
   overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
 }
 
-.event-image {
+.lunch-image {
   width: 100%;
   object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
   display: block;
   position: relative;
 }
 
-.event-banner::before {
+.lunch-banner::before {
   content: '';
   position: absolute;
   top: 0;
@@ -32,7 +32,7 @@
 }
 
 .lunch-banner .lunch-image {
-  filter: brightness(50%); /* Assombrit l'image pour que le texte soit plus lisible */
+  filter: brightness(70%); /* Assombrit l'image pour que le texte soit plus lisible */
 }
 
 .lunch-text {
@@ -49,16 +49,16 @@
   font-size: 20px;
 }
 
-.lunch-text h1, .lunch-text h2, .lunch-text p {
-  color: white;
+h1.lunch-title, p {
+  color: #2d2d2d;
   margin: 10px 0;
   font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
 }
 
-.lunch-text p {
-  list-style-type: none;
-  padding: 0;
-}
+// .lunch-text p {
+//   list-style-type: none;
+//   padding: 0;
+// }
 
 h2.orange {
   color: #CB9400;
