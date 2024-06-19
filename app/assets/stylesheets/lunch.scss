@@ -55,11 +55,32 @@ h1.lunch-title, p {
   font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
 }
 
-// .lunch-text p {
-//   list-style-type: none;
-//   padding: 0;
-// }
-
 h2.orange {
   color: #CB9400;
+  padding-top:20px;
+}
+
+h5.orange {
+  color: #CB9400;
+  padding-top: 40px;
+}
+
+.plat-lunch-title {
+  color: #2d2d2d;
+  text-decoration: underline;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+
+.plat-lunch-description {
+color:  #2d2d2d;
+font-style: italic;
+}
+
+h1.lunch-week-title {
+  color: #2d2d2d;
+  margin: 10px 0;
+  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+  margin-top: 20px;
 }
