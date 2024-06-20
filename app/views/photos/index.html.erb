@@ -6,4 +6,83 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
-<h2>Galerie</h2>
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('photosthai.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'photosthai.jpg', class: 'img-fluid gallery-img', alt: 'Photo Thai' %>
+      <% end %>
+      <p class="photo-description">Un bol de Curry vert</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('ceviche.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'ceviche.jpg', class: 'img-fluid gallery-img', alt: 'Image 2' %>
+      <% end %>
+      <p class="photo-description">Ceviche de St Jacques for lunch</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('tomates.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'tomates.jpg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Les belles tomates sont arrivées</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('pastapalourdes.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'pastapalourdes.jpg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Pasta palourdes</p>
+    </div>
+     <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('tataki.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'tataki.jpg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Tataki de Thon</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('fish.png'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'fish.png', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">La pêche du Jour...du maigre</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('saumon.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'saumon.jpg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Saumon label rouge</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('tarteabricot.jpeg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'tarteabricot.jpeg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Abricots, amandes, l'huile d'olive</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('poulpe.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'poulpe.jpg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Pasta & Poulpe</p>
+    </div>
+     <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('pita.jpeg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'pita.jpeg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Notre pain Pita tout frais du boulanger</p>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('cake.png'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'cake.png', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Bananes, dattes, cacahuètes, no sugar</p>
+    </div>
+     <div class="col-md-4 col-sm-6 mb-4">
+      <%= link_to image_path('tapas.jpg'), data: { lightbox: 'gallery' } do %>
+        <%= image_tag 'tapas.jpg', class: 'img-fluid gallery-img', alt: 'Image 3' %>
+      <% end %>
+      <p class="photo-description">Time for Apéro!</p>
+    </div>
+    <!-- Ajoutez plus d'images ici de la même manière -->
+  </div>
+</div>
+
+<div class="gallery-img-container" style="background-image: url('<%= asset_path('photosthai.jpg') %>');"></div>
