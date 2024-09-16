@@ -1,90 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <title>Le 6ieme Continent</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FontAwesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+
+  <!-- Bootstrap CSS 5.3.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap">
+
+  <!-- Lightbox CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Rails CSRF et CSP Meta Tags -->
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+
+  <!-- Fichier CSS principal -->
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <!-- Fichier JS principal -->
   <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   <style>
-body {
-  padding-top: 180px; /* Ajustez la valeur pour laisser suffisamment d'espace pour les bannières */
-}
+    body {
+      padding-top: 180px; /* Ajustez la valeur pour laisser suffisamment d'espace pour les bannières */
+    }
 
-.top-banner {
-  z-index: 1001; /* Assurez-vous que la bannière blanche reste au-dessus */
-  height: 40px; /* Ajustez selon la hauteur souhaitée pour la bannière blanche */
-}
+    .top-banner {
+      z-index: 1001;
+      height: 40px;
+    }
 
-.banner_sticky {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%);
-  position: fixed;
-  background-color: black;
-  top: 20px; /* Ajustez cette valeur pour correspondre à la hauteur de la bannière blanche */
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+    .banner_sticky {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%);
+      position: fixed;
+      background-color: black;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 160px;
+      height: auto;
+    }
+
+    .social-icons {
+      color: #999;
+      font-size: 1.2em;
+    }
+
+    .social-icons:hover {
+      color: #EEEEEE;
+    }
+
+    .fa-facebook-f:before {
+      margin-right: 20px;
+    }
+
+    .fa-instagram:before {
+      margin-right: 10px;
+    }
+
+    .social-icons a {
+      margin-left: 10px;
+    }
+
+    .content {
+      padding-top: 10px;
+    }
+
+    /* Centrage de l'icône du menu */
+    .navbar-toggler {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Ajustement des rubriques dans le menu */
+    .navbar-collapse {
+      text-align: left;
+
+    }
+
+    /* Rubriques en colonne */
+.navbar-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px; /* Ajustez cette valeur selon vos besoins */
+  flex-direction: column; /* Affiche les éléments du menu verticalement */
+  align-items: center;    /* Centre les rubriques */
+  width: 100%;            /* S'assure que les rubriques occupent la largeur disponible */
 }
 
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav-item {
+  margin-bottom: 15px;    /* Ajoute de l'espace entre les rubriques */
+  width: 100%;            /* S'assure que chaque item occupe toute la largeur */
 }
 
-.logo {
-  max-width: 160px;
-  height: auto;
+.nav-link {
+  color: white;           /* Couleur des liens */
+  text-align: center;     /* Centre le texte des rubriques */
+  display: block;
+  padding: 10px;          /* Ajoute un peu d'espace autour des liens */
+  width: 100%;            /* S'assure que chaque lien occupe toute la largeur */
 }
 
-.social-icons {
-  color: #999;
-  font-size: 1.2em;
+.nav-link:hover {
+  background-color: #333; /* Change la couleur de fond au survol */
 }
 
-.social-icons:hover {
-  color: #EEEEEE;
+
+    /* .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-item {
+      margin-bottom: 10px;
+    } */
+
+    .nav-link.invisible-button {
+      font-weight: 200;
+      font-family: 'Poppins', sans-serif;
+      color: white !important;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 14px 0px;
+    }
+
+    .nav-link.invisible-button:hover {
+      color: rgb(88, 88, 104);
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
+    }
+
+    /* Pour les écrans larges */
+@media (min-width: 768px) {
+  .top-banner {
+    padding: 10px 0;
+  }
+
+  .logo-container {
+    margin-bottom: 20px;
+  }
 }
 
-.fa-facebook-f:before {
-  margin-right: 20px;
-}
+/* Pour les écrans petits (mobile) */
+@media (max-width: 767px) {
+  .top-banner {
+    height: auto;
+    padding: 5px 0;
+  }
 
-.fa-instagram:before {
-  margin-right: 10px;
-}
+  .social-icons {
+    font-size: 1.5em;
+  }
 
-.social-icons a {
-  margin-left: 10px;
-}
+  .banner_sticky {
+    top: 0; /* Enlever l'espace pour un affichage correct sur mobile */
+  }
 
-.content {
-  padding-top: 10px; /* Ajustez cette valeur selon la hauteur de votre logo et de la navbar */
-}
+  .logo {
+    max-width: 120px; /* Réduction de la taille du logo pour mobile */
+  }
 
-.nav-link.invisible-button {
-  font-weight: 200;
-  font-family: 'Poppins', sans-serif;
-  color: white !important;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 14px 0px;
-}
+  .navbar-toggler {
+    margin: 0 auto;
+  }
 
-.nav-link.invisible-button:hover {
-  color: rgb(88, 88, 104);
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 
   </style>
@@ -113,28 +225,31 @@ body {
         <%= image_tag 'logo.jpg', alt: 'Logo', class: 'logo' %>
       </a>
     </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-black w-100">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <%= link_to "Lunch", lunch_path, class: "nav-link invisible-button" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Événements", evenements_path, class: "nav-link invisible-button" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Plats Signatures", plats_path, class: "nav-link invisible-button" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Photos", photos_path, class: "nav-link invisible-button" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Contact", contact_path, class: "nav-link invisible-button" %>
-          </li>
-        </ul>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <%= link_to "Lunch", lunch_path, class: "nav-link invisible-button" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Événements", evenements_path, class: "nav-link invisible-button" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Plats Signatures", plats_path, class: "nav-link invisible-button" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Photos", photos_path, class: "nav-link invisible-button" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Contact", contact_path, class: "nav-link invisible-button" %>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </div>
@@ -144,12 +259,10 @@ body {
     <%= yield %>
   </div>
 
-  <%= javascript_include_tag 'application' %>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS Bundle avec Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-
 </body>
 </html>
