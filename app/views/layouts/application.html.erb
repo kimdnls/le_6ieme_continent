@@ -92,6 +92,7 @@
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      border-color: non;
     }
 
     /* Ajustement des rubriques dans le menu */
@@ -100,41 +101,12 @@
 
     }
 
-    /* Rubriques en colonne */
-.navbar-nav {
-  display: flex;
-  flex-direction: column; /* Affiche les éléments du menu verticalement */
-  align-items: center;    /* Centre les rubriques */
-  width: 100%;            /* S'assure que les rubriques occupent la largeur disponible */
-}
-
-.nav-item {
-  margin-bottom: 15px;    /* Ajoute de l'espace entre les rubriques */
-  width: 100%;            /* S'assure que chaque item occupe toute la largeur */
-}
-
-.nav-link {
-  color: white;           /* Couleur des liens */
-  text-align: center;     /* Centre le texte des rubriques */
-  display: block;
-  padding: 10px;          /* Ajoute un peu d'espace autour des liens */
-  width: 100%;            /* S'assure que chaque lien occupe toute la largeur */
-}
-
-.nav-link:hover {
-  background-color: #333; /* Change la couleur de fond au survol */
-}
-
-
-    /* .navbar-nav {
+    .navbar-nav {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;  /* Menu en ligne */
       align-items: center;
+      width: auto;          /* Chaque rubrique prend sa propre taille */
     }
-
-    .nav-item {
-      margin-bottom: 10px;
-    } */
 
     .nav-link.invisible-button {
       font-weight: 200;
@@ -147,24 +119,30 @@
     }
 
     .nav-link.invisible-button:hover {
-      color: rgb(88, 88, 104);
+      color: rgb(88, 88, 104) !important;
       transition-duration: 0.4s;
       transition-timing-function: ease-in-out;
     }
 
-    /* Pour les écrans larges */
-@media (min-width: 768px) {
-  .top-banner {
-    padding: 10px 0;
-  }
-
-  .logo-container {
-    margin-bottom: 20px;
-  }
-}
-
-/* Pour les écrans petits (mobile) */
+/* Pour les petits écrans (smartphones), menu en colonne */
 @media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column !important;  /* Affiche les éléments du menu verticalement */
+    align-items: center;     /* Centre les rubriques */
+    width: 100%;             /* S'assure que les rubriques occupent la largeur disponible */
+  }
+
+  .nav-item {
+    margin-bottom: 10px;     /* Ajoute de l'espace entre les rubriques */
+    width: 100%;             /* Chaque item occupe toute la largeur sur mobile */
+  }
+
+  .nav-link {
+    text-align: center;       /* Centre le texte des rubriques */
+    flex-direction: column;
+    width: 100%;             /* S'assure que chaque lien occupe toute la largeur */
+  }
+
   .top-banner {
     height: auto;
     padding: 5px 0;
@@ -189,13 +167,16 @@
   .navbar-collapse {
     text-align: center;
   }
+}
 
-  .navbar-nav {
-    flex-direction: column;
+    /* Pour les écrans larges */
+@media (min-width: 768px) {
+  .top-banner {
+    padding: 10px 0;
   }
 
-  .nav-link {
-    font-size: 1rem;
+  .logo-container {
+    margin-bottom: 20px;
   }
 }
 
