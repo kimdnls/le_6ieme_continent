@@ -28,29 +28,58 @@
   <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <style>
+    /* Style général du corps */
     body {
+      background-color: #111; /* Fond sombre */
+      font-family: 'Poppins', sans-serif; /* Police élégante */
+      color: #eee; /* Couleur du texte claire */
       padding-top: 180px; /* Ajustez la valeur pour laisser suffisamment d'espace pour les bannières */
     }
 
+    /* Style de la bannière blanche en haut */
     .top-banner {
       z-index: 1001;
       height: 40px;
     }
 
+    /* Bannière noire collante */
     .banner_sticky {
+      background-color: black;
       background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%);
       position: fixed;
-      background-color: black;
       top: 20px;
       left: 0;
-      width: 100%;
       z-index: 1000;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-top: 20px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 100%;
     }
 
+    /* Contenu général */
+    .content {
+      padding: 40px 15px;
+      text-align: center;
+    }
+
+    /* Style des titres */
+    h1, h2, h3 {
+      color: white;
+    }
+
+    /* Style des paragraphes */
+    p {
+      color: #bbb;
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Style du logo */
     .logo-container {
       display: flex;
       justify-content: center;
@@ -62,29 +91,20 @@
       height: auto;
     }
 
+    /* Style des icônes sociales */
     .social-icons {
       color: #999;
       font-size: 1.2em;
     }
 
-    .social-icons:hover {
-      color: #EEEEEE;
-    }
-
-    .fa-facebook-f:before {
-      margin-right: 20px;
-    }
-
-    .fa-instagram:before {
-      margin-right: 10px;
-    }
-
     .social-icons a {
-      margin-left: 10px;
+      margin-left: 15px;
+      font-size: 1.5em;
+      color: #eee;
     }
 
-    .content {
-      padding-top: 10px;
+    .social-icons a:hover {
+      color: #EEEEEE;
     }
 
     /* Centrage de l'icône du menu */
@@ -92,20 +112,19 @@
       margin: 0 auto;
       display: flex;
       justify-content: center;
-      border-color: non;
+      border-color: none;
     }
 
     /* Ajustement des rubriques dans le menu */
     .navbar-collapse {
       text-align: left;
-
     }
 
     .navbar-nav {
       display: flex;
-      flex-direction: row;  /* Menu en ligne */
+      flex-direction: row; /* Menu en ligne */
       align-items: center;
-      width: auto;          /* Chaque rubrique prend sa propre taille */
+      width: auto; /* Chaque rubrique prend sa propre taille */
     }
 
     .nav-link.invisible-button {
@@ -124,61 +143,74 @@
       transition-timing-function: ease-in-out;
     }
 
-/* Pour les petits écrans (smartphones), menu en colonne */
-@media (max-width: 767px) {
-  .navbar-nav {
-    flex-direction: column !important;  /* Affiche les éléments du menu verticalement */
-    align-items: center;     /* Centre les rubriques */
-    width: 100%;             /* S'assure que les rubriques occupent la largeur disponible */
-  }
+    /* Style pour les petits écrans */
+    @media (max-width: 767px) {
+      .navbar-nav {
+        flex-direction: column !important;
+        align-items: center;
+        width: 100%;
+      }
 
-  .nav-item {
-    margin-bottom: 10px;     /* Ajoute de l'espace entre les rubriques */
-    width: 100%;             /* Chaque item occupe toute la largeur sur mobile */
-  }
+      .nav-item {
+        margin-bottom: 15px;
+        width: 100%;
+      }
 
-  .nav-link {
-    text-align: center;       /* Centre le texte des rubriques */
-    flex-direction: column;
-    width: 100%;             /* S'assure que chaque lien occupe toute la largeur */
-  }
+      .nav-link {
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+      }
 
-  .top-banner {
-    height: auto;
-    padding: 5px 0;
-  }
+      .top-banner {
+        height: auto;
+        padding: 5px 0;
+      }
 
-  .social-icons {
-    font-size: 1.5em;
-  }
+      .social-icons {
+        font-size: 1.5em;
+      }
 
-  .banner_sticky {
-    top: 0; /* Enlever l'espace pour un affichage correct sur mobile */
-  }
+      .banner_sticky {
+        top: 0;
+      }
 
-  .logo {
-    max-width: 120px; /* Réduction de la taille du logo pour mobile */
-  }
+      .logo {
+        max-width: 80px;
+      }
 
-  .navbar-toggler {
-    margin: 0 auto;
-  }
+      .navbar-toggler {
+        margin: 0 auto;
+      }
 
-  .navbar-collapse {
-    text-align: center;
-  }
-}
+      .navbar-collapse {
+        text-align: center;
+      }
+    }
 
-    /* Pour les écrans larges */
-@media (min-width: 768px) {
-  .top-banner {
-    padding: 10px 0;
-  }
+    /* Style pour les écrans larges */
+    @media (min-width: 768px) {
+      .top-banner {
+        padding: 10px 0;
+      }
 
-  .logo-container {
-    margin-bottom: 20px;
-  }
-}
+      .logo-container {
+        margin-bottom: 20px;
+      }
+
+      .navbar-nav .nav-item {
+        margin-left: 30px;
+      }
+
+      .navbar-nav .nav-link {
+        color: #eee !important;
+        font-size: 1.2em;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ddd !important;
+      }
+    }
 
   </style>
 </head>
@@ -188,7 +220,7 @@
   <!-- Bannière blanche -->
   <div class="container-fluid bg-white border-bottom fixed-top top-banner">
     <div class="row">
-      <div class="col text-right py-2">
+      <div class="col text-right py-1">
         <a href="https://www.facebook.com/le6iemecontinent" target="_blank" class="social-icons">
           <i class="fab fa-facebook-f"></i>
         </a>
