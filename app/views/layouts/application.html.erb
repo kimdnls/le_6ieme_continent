@@ -112,8 +112,21 @@
       margin: 0 auto;
       display: flex;
       justify-content: center;
-      border-color: none;
+      outline: none;/* Pour éviter tout autre box-shadow qui pourrait être appliqué */
+      box-shadow: none;
     }
+
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
 
     /* Ajustement des rubriques dans le menu */
     .navbar-collapse {
@@ -172,16 +185,23 @@
       }
 
       .banner_sticky {
-        top: 0;
+        padding-top: 35px;
       }
 
       .logo {
         max-width: 80px;
+        height: auto;
       }
 
       .navbar-toggler {
         margin: 0 auto;
       }
+
+      .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
 
       .navbar-collapse {
         text-align: center;
