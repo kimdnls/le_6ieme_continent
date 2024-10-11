@@ -42,6 +42,7 @@
   margin: 10px 0;
 }
 
+
 .plat-title {
   color: white;
   text-decoration: underline;
@@ -49,14 +50,11 @@
   margin-bottom: 0px;
 }
 
-
 .plat-description {
   color: white;
   font-style: italic;
+  font-weight: 180;
 }
-
-
-
 
 .platsignature-text h1 {
   margin-bottom: 20px; /* Ajoutez plus d'espace sous le titre principal */
@@ -75,16 +73,7 @@
   position: relative;
 }
 
-.platsignature-title {
-  font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
-  font-weight: 200;
-  padding-bottom: 30px;
-  z-index: 2;
-  color: white;
-  position: relative;
-}
-
-
+/* Responsive Design */
 @media (max-width: 767px) {
   .entry-text-center {
     padding-left: 20px;
@@ -92,15 +81,21 @@
     font-size: 20px;
   }
 
+  .platsignature-title {
+    font-size: 2rem; /* Taille plus petite pour mobile */
+    padding-top: 50px; /* Ajuster les marges pour les petits écrans */
+    padding-bottom: 40px;
+  }
+
   .platsignature-banner {
     width: 100%;
     position: absolute;
-    overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+    overflow: hidden;
   }
 
   .platsignature-image {
     width: 100%;
-    object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
+    object-fit: cover;
     display: block;
     position: relative;
   }
