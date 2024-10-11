@@ -8,6 +8,7 @@
   width: 100%;
   object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
   display: block;
+  position: relative;
 }
 
 .event-banner::before {
@@ -61,4 +62,12 @@
 
 .event-text ul li {
   margin-bottom: 10px; /* Ajoutez de l'espace entre les éléments de la liste */
+}
+
+@media (max-width: 767px) {
+  .event-banner {
+    width: 100% !important;
+    position: absolute;
+    overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+  }
 }
