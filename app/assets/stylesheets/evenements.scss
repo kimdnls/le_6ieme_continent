@@ -32,15 +32,21 @@
   background-color:  #f4ebdc; /* Beige */
   color: #333;
   border: none;
-  margin: 60px;
+  margin: 150px;
 }
 
 .text-content {
   flex: 1;
   padding-right: 20px;
-  font-size: 1.2em;
-  line-height: 1.6;
-  background-color:  #f5f0e1;
+  padding-bottom: 1em;
+  background-color:  #f4ebdc;
+  font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  color: #212226;
+  font-weight: 80; /* Vérifiez le poids exact */
+  line-height: 1.5; /* Ajustez selon l'exemple */
+  letter-spacing: 0.1em;
 }
 
 .image-content {
