@@ -1,19 +1,51 @@
+.event-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+  padding-bottom: 20px;
+}
+
+.event-image {
+  width: 100%;
+  object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
+  display: block;
+  position: relative;
+}
+
+.event-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  z-index: 1;
+}
+
 .event-section {
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px;
-  background-color: #f4ebdc; /* Beige */
+  background-color:  #f4ebdc; /* Beige */
   color: #333;
-  border: 1px solid #333; /* Bordure temporaire pour voir la section */
+  border: none;
+  margin: 150px;
 }
 
 .text-content {
   flex: 1;
   padding-right: 20px;
-  font-size: 1.2em;
-  line-height: 1.6;
-  background-color: rgba(255, 0, 0, 0.1); /* Couleur temporaire pour débogage */
+  padding-bottom: 1em;
+  background-color:  #f4ebdc;
+  font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  color: #212226;
+  font-weight: 80; /* Vérifiez le poids exact */
+  line-height: 1.5; /* Ajustez selon l'exemple */
+  letter-spacing: 0.1em;
 }
 
 .image-content {
@@ -28,20 +60,14 @@
   object-fit: cover;
 }
 
-/* Bouton */
 .cta-button {
+  background-color: #d4a017; /* couleur dorée */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
   text-align: center;
-  margin: 30px 0;
-}
-
-.cta-button a {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #d9a400;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
   text-decoration: none;
+  display: inline-block;
   border-radius: 5px;
 }
 

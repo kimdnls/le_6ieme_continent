@@ -6,20 +6,36 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
+ <!-- Event Banner -->
+  <div class="event-banner">
+    <%= image_tag 'platssignaturesban.jpg', alt: 'Event Image', class: 'event-image img-fluid w-100' %>
+  </div>
+ <!-- Information -->
+  <div class="container my-5 lunch-container text-center">
+    <div class="row justify-content-center">
+       <div class="col-12">
+         <h1 class="lunch-title">NOTRE SPECIALITE</h1>
+          <p>Vous offrir un voyage culinaire</p>
+          <p>pour rendre votre evenement unique</p>
+          <h2 class="orange">* découvrir * déguster * partager * </h2>
+      </div>
+    </div>
+  </div>
+
   <div class="event-section">
-    <div class="text-content">
-      <p>Laissez-vous guider par les propositions de votre chef de projet dédié :</p>
-      <p>Offres culinaires innovantes, mises en scène originales, et service haut de gamme...</p>
-      <p>Nous personnalisons l’ensemble de nos services pour vous offrir un moment d’exception.</p>
+      <div class="text-content">
+      <ul>Laissez-vous guider par</ul>
+      <ul>Offres culinaires innovantes, mises en scène originales, et service haut de gamme...</ul>
+      <ul>Nous personnalisons l’ensemble de nos services pour vous offrir un moment d’exception.</ul>
     </div>
     <div class="image-content">
-      <img src="images/tapas.jpg" alt="Image événement" />
+        <%= image_tag 'eventimage.jpg', alt: 'TopChef Image', class: 'contact-image img-fluid w-100' %>
     </div>
   </div>
 
   <!-- Bouton d'appel à l'action -->
   <div class="cta-button">
-    <a href="/devis">DEMANDEZ UN DEVIS</a>
+      <%= link_to "DEMANDEZ UN DEVIS", contact_path, class: "cta-button" %>
   </div>
 
   <%= javascript_include_tag 'application' %>
