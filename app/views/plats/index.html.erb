@@ -6,9 +6,50 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
-  <div class="platsignature-banner">
-    <%= image_tag 'platsignature.jpg', alt: 'Chef Image', class: 'platsignautre-image img-fluid w-100' %>
+
+
+  <div class="home-banner">
+    <%= image_tag 'home.png', alt: 'Home Image', class: 'home-image img-fluid w-100' %>
   </div>
+  <!-- Contact Information -->
+  <div class="container my-5 tataki-container text-center">
+     <div class="row justify-content-center">
+        <div class="col-12">
+          <h1 class="entry-title">Voici une selection parmi nos plats signatures</h1>
+            <%# <h2>Salade de Poulpe</h2>
+              <p>Poulpe cuit à basse temperature, poivrons grillés, tomates sechées, caviar d'aubergines, roquette, parmesan</p>
+            <h2>Ceviche de Noix Saint Jacques</h2>
+              <p>Lait de coco & citron vert, tagliatelles de courgettes, mangue, concombre, coriandre</p>
+            <h2>Gravlax</h2>
+              <p>Saumon ou Truite mariné à l'aneth, Gin, salade de lentilles corail, crème au citron, basilic</p>
+            <h2>Tataki de Thon</h2>
+              <p>Wakamee, Houmous à l'avocat et aux herbes d'Asie, pousses de soja, Wasabi</p>
+            <h2>Carpaccio de Canard</h2>
+              <p>Maki de riz, carottes marinés, Terriyaki, cacahuètes, soja, coriandre</p>
+            <h2>Tartare de Boeuf à la thai</h2>
+              <p> Citronnelle, gingembre, poivrons grillés, thai basilic, sauce Sriracha</p> %>
+            <p class="plat-description">Voici une selection parmi nos plats signatures</p>
+            <ul class="plat-title">Salade de Poulpe</ul>
+            <p class="plat-description">Poulpe cuit à basse temperature, poivrons grillés, tomates sechées, caviar d'aubergines, roquette, parmesan</p>
+            <ul class="plat-title">Ceviche de Noix Saint Jacques</ul>
+            <p class="plat-description">Lait de coco & citron vert, tagliatelles de courgettes, mangue, concombre, coriandre</p>
+            <ul class="plat-title">Gravlax</ul>
+            <p class="plat-description">Saumon ou Truite mariné à l'aneth, Gin, salade de lentilles corail, crème au citron, basilic</p>
+            <ul class="plat-title">Tataki de Thon</ul>
+            <p class="plat-description">Wakamee, Houmous aux herbes d'Asie, pousses de soja, Wasabi</p>
+            <ul class="plat-title">Carpaccio de Canard</ul>
+            <p class="plat-description">Maki de riz, carottes marinés, cacahuètes, soja, coriandre</p>
+            <ul class="plat-title">Tartare de Boeuf à la thai</ul>
+            <p class="plat-description"> Citronnelle, gingembre, poivrons grillés, thai basilic, sauce Sriracha</p>
+        </div>
+     </div>
+  </div>
+
+  <%= javascript_include_tag 'application' %>
+</body>
+</html>
+
+
   <!-- Contact Information -->
   <div class="container my-5 platsignature-container text-center">
     <div class="platsignature-text">
