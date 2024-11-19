@@ -22,21 +22,21 @@
     </div>
   </div>
 
-  <div class="event-section">
-      <div class="text-content">
-      <ul>Laissez-vous guider par</ul>
-      <ul>Offres culinaires innovantes, mises en scène originales, et service haut de gamme...</ul>
-      <ul>Nous personnalisons l’ensemble de nos services pour vous offrir un moment d’exception.</ul>
-    </div>
-    <div class="image-content">
-        <%= image_tag 'eventimage.jpg', alt: 'TopChef Image', class: 'contact-image img-fluid w-100' %>
-    </div>
+  <div class="event-container">
+  <div class="text-content">
+    <ul>Laissez-vous guider par</ul>
+    <ul>Offres culinaires innovantes, mises en scène originales, et service haut de gamme...</ul>
+    <ul>Nous personnalisons l’ensemble de nos services pour vous offrir un moment d’exception.</ul>
   </div>
 
-  <!-- Bouton d'appel à l'action -->
-  <div class="cta-button">
-      <%= link_to "DEMANDEZ UN DEVIS", contact_path, class: "cta-button" %>
+  <div class="image-content">
+    <%= image_tag 'eventimage.jpg', alt: 'TopChef Image', class: 'contact-image img-fluid w-100' %>
+    <!-- Bouton d'appel à l'action -->
+  <div class="button-container">
+    <button class="btn">Demandez un devis</button>
+    </div>
   </div>
+</div>
 
   <%= javascript_include_tag 'application' %>
 </body>
