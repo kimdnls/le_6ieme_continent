@@ -29,33 +29,36 @@
   align-items: stretch;
   justify-content: space-between;
   background-color: #f4ebdc; /* Beige */
-  color: #333;
   gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto; /* Réduit l'espacement autour de la section */
+  // max-width: 1200px;
+  // margin: 2rem auto; /* Réduit l'espacement autour de la section */
   border-radius: 5px;
-  height: 400px; /* Limite la hauteur totale de la section */
+  height: 450px; /* Limite la hauteur totale de la section */
   overflow: hidden; /* Masque tout débordement */
+  max-width: 1200px; /* Limitez la largeur du texte pour plus d'élégance */
+  margin: 0 auto; /* Centrez le texte */
 }
 
 .text-content {
   flex: 1;
   font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
-  font-size: 16px;
-  text-align: left;
-  color: #212226;
-  line-height: 1.5;
-  letter-spacing: 0.1em;
+  font-size: 100%;
+  text-align: justify;
+  color: #333;
+  line-height: 1,7;
+  letter-spacing: 0.07em;
+  font-weight: 300;
   padding: 2rem;
   overflow: auto; /* Permet de gérer les débordements de contenu */
+}
+
+.text-content ul {
+  padding-bottom: 1em; /* Espacement entre les paragraphes */
 }
 
 .image-content {
   flex: 1;
   position: relative;
-  // padding-left: 20px;
-  // max-width: 100%;
-  // height: auto;
 }
 
 .image-content img {
