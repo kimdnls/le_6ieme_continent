@@ -39,9 +39,11 @@
     /* Style de la bannière blanche en haut */
     .top-banner {
       z-index: 1001;
-      height: 45px;
-      text-align: right;
-      padding: 10px;
+      height: 40px;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     /* Bannière noire collante */
@@ -62,6 +64,48 @@
       width: 100%;
     }
 
+    .top-banner, .banner_sticky {
+      margin: 0;
+    }
+
+     /* Style des icônes sociales */
+    .social-icons {
+      padding-right: 20px;
+      color: #999;
+      font-size: 1em;
+    }
+
+    .fa-brands, .fab {
+      font-family: "Font Awesome 6 Brands";
+      font-weight: 700;
+      padding-right: 10px;
+    }
+
+    .fa-instagram {
+      padding-right: 50px;
+    }
+
+    .top-banner .social-icons {
+      /* display: flex; Aligne les icônes sur une ligne */
+      gap: 10px; /* Espacement entre les icônes */
+    }
+    .social-icons a:hover {
+      color: #EEEEEE;
+    }
+
+       /* Style du logo */
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 160px;
+      height: auto;
+      padding-top: 5px;
+    }
+
     /* Contenu général */
     .content {
       padding: 40px 15px;
@@ -79,40 +123,6 @@
       font-size: 1.2em;
       line-height: 1.6;
       margin-bottom: 20px;
-    }
-
-    /* Style du logo */
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo {
-      max-width: 160px;
-      height: auto;
-    }
-
-    /* Style des icônes sociales */
-    .social-icons {
-      color: #999;
-      font-size: 1.2em;
-    }
-
-    /* .social-icons a {
-      margin-left: 15px;
-      font-size: 1.5em;
-      color: #eee;
-    } */
-
-    .fa-brands, .fab {
-      font-family: "Font Awesome 6 Brands";
-      font-weight: 700;
-      padding-right: 10px;
-    }
-
-    .social-icons a:hover {
-      color: #EEEEEE;
     }
 
     /* Centrage de l'icône du menu */
