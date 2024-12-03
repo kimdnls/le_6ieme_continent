@@ -104,12 +104,12 @@
       max-width: 160px;
       height: auto;
       padding-top: 5px;
-      padding-bottom: 0px;
+      padding-bottom: 0;
+      margin: 0;
     }
 
     /* Contenu général */
     .content {
-      padding: 40px 15px;
       text-align: center;
     }
 
@@ -128,7 +128,8 @@
 
     /* Centrage de l'icône du menu */
     .navbar-toggler {
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       outline: none;/* Pour éviter tout autre box-shadow qui pourrait être appliqué */
@@ -158,6 +159,7 @@
       align-items: center;
       width: auto; /* Chaque rubrique prend sa propre taille */
       padding-top: 0px;
+      padding-bottom: 8px;
     }
 
     .nav-link.invisible-button {
@@ -166,8 +168,8 @@
       color: white !important;
       text-decoration: none;
       cursor: pointer;
-      font-size: 14px;
-      padding: 14px 0px;
+      font-size: 14px !important;
+      padding: 0px 0px;
     }
 
     .nav-link.invisible-button:hover {
@@ -175,6 +177,7 @@
       transition-duration: 0.4s;
       transition-timing-function: ease-in-out;
     }
+
 
     /* Style pour les petits écrans */
     @media (max-width: 767px) {
