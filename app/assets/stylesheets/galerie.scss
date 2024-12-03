@@ -16,3 +16,8 @@
   font-size: 14px;
   color: #555;
 }
+
+.photos-container {
+  margin-top: 30px !important; /* Le !important peut aider si le framework surcharge tes styles */
+}
+
