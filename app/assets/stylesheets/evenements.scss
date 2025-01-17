@@ -46,23 +46,23 @@
   font-size: 100%;
   text-align: justify;
   color: #333;
-  line-height: 1.8; /* Espacement vertical entre les lignes */
+  line-height: 1.8; /* Espacement vertical plus aéré */
   letter-spacing: 0.07em;
   font-weight: 200;
   padding: 2rem;
   overflow: auto;
-}
 
-/* Suppression des puces */
-.text-content ul {
-  list-style: none; /* Supprime les puces */
-  padding: 0;
-  margin: 0;
-}
+  /* Suppression des puces */
+  ul {
+    list-style-type: none; /* Supprime toutes les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime le margin par défaut */
+  }
 
-/* Espacement entre les éléments de la liste */
-.text-content li {
-  margin-bottom: 15px; /* Ajoute de l'espace entre chaque ligne */
+  li {
+    margin-bottom: 20px; /* Plus d'espace entre les éléments */
+    line-height: 1.8; /* Renforce l'espacement vertical */
+  }
 }
 
 /* Image Content */
@@ -107,12 +107,34 @@
 /* Responsive */
 @media (max-width: 767px) {
   .event-container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Empile en colonne */
+    text-align: center; /* Centrer le contenu */
+    overflow: visible; /* Empêche le texte d'être coupé */
+    padding: 10px; /* Ajoute un peu de marge */
   }
 
-  .text-content,
+  .text-content {
+    order: 1; /* Place le texte en premier */
+    padding: 10px; /* Réduit l'espace pour mobile */
+    font-size: 16px; /* Taille de texte adaptée */
+    line-height: 1.6; /* Meilleure lisibilité */
+  }
+
   .image-content {
-    padding: 10px 0;
+    order: 2; /* Place l'image après le texte */
+    margin-top: 10px; /* Ajoute de l'espace entre le texte et l'image */
+  }
+
+  .image-content img {
+    width: 100%; /* Ajuste l'image à la largeur de l'écran */
+    height: auto; /* Respecte les proportions */
+  }
+
+  .image-content .btn {
+    display: block; /* Rend le bouton visible */
+    margin: 15px auto; /* Centre le bouton */
+    width: auto; /* Ajuste la largeur */
+    padding: 10px 20px; /* Ajoute de l'espace autour du texte */
+    font-size: 14px; /* Taille adaptée pour mobile */
   }
 }
