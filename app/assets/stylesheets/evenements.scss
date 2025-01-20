@@ -28,47 +28,42 @@
 .event-container {
   position: relative;
   display: flex;
-  align-items: stretch;
+  flex-wrap: wrap; /* Permet aux enfants de passer sur plusieurs lignes */
   justify-content: space-between;
   background-color: #f4ebdc;
   gap: 2rem;
   border-radius: 5px;
-  height: 450px;
-  overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  padding: 20px;
 }
 
 .text-content {
   flex: 1;
   font-family: 'Poppins', sans-serif;
-  font-size: 100%;
-  text-align: justify;
+  font-size: 1rem;
+  text-align: justify; /* Justifie le texte */
   color: #333;
-  line-height: 1.8; /* Espacement vertical plus aéré */
-  letter-spacing: 0.07em;
+  line-height: 1.8; /* Espacement vertical */
+  letter-spacing: 0.05em; /* Espacement horizontal entre les lettres */
   font-weight: 200;
-  padding: 2rem;
-  overflow: auto;
+  padding: 2rem; /* Marge intérieure pour respirer */
 
-  /* Suppression des puces */
   ul {
-    list-style-type: none; /* Supprime toutes les puces */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime le margin par défaut */
+    list-style: none; /* Retire les puces */
+    padding: 0; /* Supprime les marges internes */
+    margin: 0; /* Supprime les marges externes */
   }
 
   li {
-    margin-bottom: 20px; /* Plus d'espace entre les éléments */
-    line-height: 1.8; /* Renforce l'espacement vertical */
+    margin-bottom: 15px; /* Espacement entre les items */
+    line-height: 1.8; /* Espacement des lignes */
   }
 }
 
-/* Image Content */
 .image-content {
+  position: relative; /* Nécessaire pour que le bouton utilise ce conteneur comme référence */
   flex: 1;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -77,16 +72,14 @@
 
 .contact-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 5px;
 }
 
-/* Bouton */
 .btn-action {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  position: absolute; /* Positionnement absolu pour le placer par rapport à son conteneur parent */
+  bottom: 10px; /* Distance du bas de l'image */
+  right: 10px; /* Distance du côté droit de l'image */
   background-color: #cb9400;
   color: #fff !important;
   padding: 0.8rem 1.5rem;
@@ -96,9 +89,14 @@
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  z-index: 10;
+  z-index: 10; /* Assure que le bouton reste visible devant l'image */
   transition: background-color 0.3s ease;
 }
+
+.btn-action:hover {
+  background-color: #e6b800; /* Couleur au survol */
+}
+
 
 .btn-action:hover {
   background-color: #e6b800;
@@ -107,34 +105,18 @@
 /* Responsive */
 @media (max-width: 767px) {
   .event-container {
-    flex-direction: column; /* Empile en colonne */
-    text-align: center; /* Centrer le contenu */
-    overflow: visible; /* Empêche le texte d'être coupé */
-    padding: 10px; /* Ajoute un peu de marge */
+    flex-direction: column;
+    gap: 20px; /* Ajoute de l'espace entre les sections */
   }
 
   .text-content {
-    order: 1; /* Place le texte en premier */
-    padding: 10px; /* Réduit l'espace pour mobile */
-    font-size: 16px; /* Taille de texte adaptée */
-    line-height: 1.6; /* Meilleure lisibilité */
+    text-align: center;
   }
 
-  .image-content {
-    order: 2; /* Place l'image après le texte */
-    margin-top: 10px; /* Ajoute de l'espace entre le texte et l'image */
+  .btn-action {
+      bottom: 5px; /* Réduit l'espace en bas pour mobile */
+      right: 5px; /* Réduit l'espace à droite pour mobile */
+      font-size: 12px; /* Réduit la taille du texte pour mobile */
+      padding: 0.6rem 1rem; /* Réduit les marges internes du bouton */
+    }
   }
-
-  .image-content img {
-    width: 100%; /* Ajuste l'image à la largeur de l'écran */
-    height: auto; /* Respecte les proportions */
-  }
-
-  .image-content .btn {
-    display: block; /* Rend le bouton visible */
-    margin: 15px auto; /* Centre le bouton */
-    width: auto; /* Ajuste la largeur */
-    padding: 10px 20px; /* Ajoute de l'espace autour du texte */
-    font-size: 14px; /* Taille adaptée pour mobile */
-  }
-}
