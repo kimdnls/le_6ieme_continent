@@ -4,57 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evenements</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <style>
-    /* Suppression des puces */
-    .text-content ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    /* Ajustement du texte */
-    .text-content {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%; /* S'assure que le texte occupe tout l'espace disponible */
-    }
-
-    /* Pour éviter les coupures */
-    .event-container {
-      display: flex;
-      flex-wrap: wrap; /* Permet de gérer les petits écrans */
-      gap: 20px; /* Espace entre texte et image */
-    }
-
-    /* Bouton bien visible */
-    .image-content .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #f7931e; /* Couleur du bouton */
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .image-content .btn:hover {
-      background-color: #e5821b; /* Légère variation au survol */
-    }
-
-    /* Ajustement des images */
-    .contact-image {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Centrage des sections */
-    .image-content {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <!-- Event Banner -->
@@ -79,18 +28,18 @@
     <div class="col-12 col-lg-6 text-content">
       <ul>
         <li>Laissez-vous séduire par nos savoureuses créations.</li>
-        <li>Des envies de sur-mesure ?</li>
+        <li>Des envies de sur-mesure ?</li>
         <li>Nous vous proposons des saveurs 100% personnalisées.</li>
         <li>Nous personnalisons l’ensemble de nos services pour vous offrir un moment d’exception.</li>
         <li>Nous rendons votre événement inoubliable, avec la possibilité de cuisine à la minute devant vos invités.</li>
-        <li>Contactez-nous pour en savoir plus!</li>
+        <li>Contactez-nous pour en savoir plus !</li>
       </ul>
     </div>
 
-    <div class="col-12 col-lg-6 text-center image-content">
+    <div class="col-12 col-lg-6 image-content">
       <%= image_tag 'octopus.jpg', alt: 'TopChef Image', class: 'contact-image img-fluid rounded' %>
       <!-- Bouton d'appel à l'action -->
-      <a href="<%= contact_path %>" class="btn">Demandez un devis</a>
+      <a href="<%= contact_path %>" class="btn btn-action">Demandez un devis</a>
     </div>
   </div>
 

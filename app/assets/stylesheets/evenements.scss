@@ -1,13 +1,14 @@
+/* Event Banner */
 .event-banner {
   width: 100%;
   position: relative;
-  overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+  overflow: hidden;
   padding-bottom: 20px;
 }
 
 .event-image {
   width: 100%;
-  object-fit: cover; /* Assurez-vous que l'image couvre le conteneur tout en gardant ses proportions */
+  object-fit: cover;
   display: block;
   position: relative;
 }
@@ -23,56 +24,65 @@
   z-index: 1;
 }
 
+/* Event Container */
 .event-container {
   position: relative;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  background-color: #f4ebdc; /* Beige */
-  gap: 2rem;
-  // max-width: 1200px;
-  // margin: 2rem auto; /* Réduit l'espacement autour de la section */
-  border-radius: 5px;
-  height: 450px; /* Limite la hauteur totale de la section */
-  overflow: hidden; /* Masque tout débordement */
-  max-width: 1200px; /* Limitez la largeur du texte pour plus d'élégance */
-  margin: 0 auto; /* Centrez le texte */
-  margin-bottom: 50px;
+  background-color: #f4ebdc;
+  border-radius: none;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 450px; /* Hauteur fixe pour l'exemple */
 }
 
+/* Texte */
 .text-content {
-  flex: 1;
+  flex: 1; /* Prend la moitié gauche */
   font-family: 'Poppins', sans-serif;
   font-size: 100%;
   text-align: justify;
   color: #333;
-  line-height: 1,7;
-  letter-spacing: 0.07em;
-  font-weight: 200;
+  line-height: 1.8;
   padding: 2rem;
-  overflow: auto; /* Permet de gérer les débordements de contenu */
+  font-weight: 200;
+  letter-spacing: 0.05em; /* Espacement horizontal entre les lettres */
+  overflow-y: auto;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
 }
 
-.text-content ul {
-  padding-bottom: 1em; /* Espacement entre les paragraphes */
-}
-
+/* Image */
 .image-content {
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; /* Positionne le bouton en bas à droite */
 }
 
-.image-content img {
+.contact-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Évite les déformations de l'image */
-  border-radius: 5px;
+  object-fit: cover; /* L'image occupe tout l'espace disponible */
 }
 
-.image-content .btn {
+/* Bouton */
+.btn-action {
   position: absolute;
-  bottom: 10px; /* Positionne le bouton en bas */
-  right: 10px; /* Positionne le bouton à droite */
+  bottom: 20px; /* Distance du bas */
+  right: 20px; /* Distance de la droite */
   background-color: #cb9400;
   color: #fff !important;
   padding: 0.8rem 1.5rem;
@@ -81,13 +91,15 @@
   text-transform: uppercase;
   text-decoration: none;
   border: none;
-  border-radius: 5px;
-  z-index: 10; /* Assure que le bouton reste visible */
-  transition: background-color 0.3s ease;
+  border-radius: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère */
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.image-content .btn:hover {
+.btn-action:hover {
   background-color: #e6b800;
+  transform: translateY(-3px); /* Effet de survol */
 }
 
 
@@ -95,10 +107,17 @@
 @media (max-width: 767px) {
   .event-container {
     flex-direction: column;
+    gap: 20px; /* Ajoute de l'espace entre les sections */
+  }
+
+  .text-content {
     text-align: center;
   }
 
-  .text-content, .image-content {
-    padding: 10px 0;
+  .btn-action {
+      bottom: 5px; /* Réduit l'espace en bas pour mobile */
+      right: 5px; /* Réduit l'espace à droite pour mobile */
+      font-size: 12px; /* Réduit la taille du texte pour mobile */
+      padding: 0.6rem 1rem; /* Réduit les marges internes du bouton */
+    }
   }
-}
