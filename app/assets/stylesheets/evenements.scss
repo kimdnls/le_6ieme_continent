@@ -31,11 +31,11 @@
   align-items: stretch;
   justify-content: space-between;
   background-color: #f4ebdc;
-  border-radius: none;
-  overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
-  height: 450px; /* Hauteur fixe pour l'exemple */
+  padding: 0; /* Supprime les padding inutiles */
+  height: 450px; /* Hauteur fixe */
+  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
 
 /* Texte */
@@ -69,26 +69,27 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; /* Positionne le bouton en bas à droite */
+  align-items: flex-end;
+  overflow: hidden; /* Évite tout dépassement */
 }
 
 .contact-image {
   width: 100%;
   height: 100%;
   object-fit: cover; /* L'image occupe tout l'espace disponible */
+  display: block; /* Évite les marges blanches supplémentaires */
 }
 
 /* Bouton */
 .btn-action {
   position: absolute;
-  padding-top:40px !important;
+  padding-top: 40px !important;
   padding-right: 60px !important;
   padding-bottom: 40px !important;
   padding-left: 60px !important;
   background-color: #cb9400;
   color: #fff !important;
   border-width: 0 !important;
-  padding: 0.8rem 1.5rem;
   font-size: 12px;
   font-weight: 700 !important;
   letter-spacing: 4px;
@@ -106,21 +107,34 @@
   transform: translateY(-3px); /* Effet de survol */
 }
 
+/* Suppression des marges globales */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Responsive */
 @media (max-width: 767px) {
   .event-container {
     flex-direction: column;
     gap: 20px; /* Ajoute de l'espace entre les sections */
+    padding: 1rem; /* Ajoute du padding pour une meilleure lisibilité */
   }
 
   .text-content {
-    text-align: center;
+    padding: 1rem;
+    text-align: center; /* Centre le texte pour les petits écrans */
+  }
+
+  .contact-image {
+    width: 100%; /* Assure une largeur adaptée sur mobile */
   }
 
   .btn-action {
-      bottom: 5px; /* Réduit l'espace en bas pour mobile */
-      right: 5px; /* Réduit l'espace à droite pour mobile */
-      font-size: 12px; /* Réduit la taille du texte pour mobile */
-      padding: 0.6rem 1rem; /* Réduit les marges internes du bouton */
-    }
+    bottom: 5px; /* Réduit l'espace en bas pour mobile */
+    right: 5px; /* Réduit l'espace à droite pour mobile */
+    font-size: 12px; /* Réduit la taille du texte pour mobile */
+    padding: 0.6rem 1rem; /* Réduit les marges internes du bouton */
   }
+}
