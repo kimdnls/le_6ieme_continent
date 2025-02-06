@@ -3,6 +3,13 @@ body {
   margin: 0;
 }
 
+.home-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+  padding-top: 120px;
+}
+
 a {
   font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
   color: #2d2d2d;
