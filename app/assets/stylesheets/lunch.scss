@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   overflow: hidden; /* Assurez-vous que tout contenu en débordement est masqué */
+  padding-top: 120px;
 }
 
 .lunch-image {
@@ -21,13 +22,6 @@
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
   z-index: 1;
-}
-
-
-.lunch-banner {
-  position: relative;
-  text-align: center;
-  color: white;
 }
 
 .lunch-banner .lunch-image {

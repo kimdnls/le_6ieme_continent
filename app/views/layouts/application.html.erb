@@ -36,35 +36,19 @@
       padding-top: 180px; /* Ajustez la valeur pour laisser suffisamment d'espace pour les bannières */
     }
 
-    /* Style de la bannière blanche en haut */
-    .top-banner {
-      z-index: 1001;
-      height: 40px;
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-
-    /* Bannière noire collante */
     .banner_sticky {
       background-color: black;
       background-image: linear-gradient(180deg, rgba(0, 0, 0, .96) 0, rgba(0, 0, 0, .4) 100%);
       position: fixed;
-      top: 20px;
       left: 0;
       z-index: 1000;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 20px;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       width: 100%;
-    }
-
-    .top-banner, .banner_sticky {
       margin: 0;
     }
 
@@ -141,12 +125,10 @@
       box-shadow: none;
     }
 
-
-  .navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
+    .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
+    }
 
     /* Ajustement des rubriques dans le menu */
     .navbar-collapse {
@@ -178,82 +160,61 @@
       transition-timing-function: ease-in-out;
     }
 
-footer {
-  width: 100%; /* Pleine largeur */
-  background-color: #000; /* Couleur de fond */
-  color: #fff; /* Texte en blanc */
-  padding: 10px 20px; /* Ajustement de la hauteur */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centrer horizontalement */
-  align-items: flex-start; /* Alignement vertical des sections */
-  box-sizing: border-box;
-}
+    footer {
+      width: 100%; /* Pleine largeur */
+      background-color: #000; /* Couleur de fond */
+      color: #fff; /* Texte en blanc */
+      padding: 10px 20px; /* Ajustement de la hauteur */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Centrer horizontalement */
+      align-items: flex-start; /* Alignement vertical des sections */
+      box-sizing: border-box;
+    }
 
-footer .section {
-  flex: 1 1 calc(33.333% - 40px); /* Colonnes égales, avec marge */
-  margin: 0 20px; /* Espacement horizontal des sections */
-  text-align: center; /* Centre le texte dans chaque section */
-}
+    footer .section {
+      flex: 1 1 calc(33.333% - 40px); /* Colonnes égales, avec marge */
+      margin: 0 20px; /* Espacement horizontal des sections */
+      text-align: center; /* Centre le texte dans chaque section */
+    }
 
-footer .section h3 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
+    footer .section h3 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
 
-footer .section p,
-footer .section a {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  text-decoration: none;
-  color: #fff;
-}
+    footer .section p,
+    footer .section a {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      text-decoration: none;
+      color: #fff;
+    }
 
-footer .nav-item {
-  list-style: none; /* Supprime les bullet points */
-}
+    footer .nav-item {
+      list-style: none; /* Supprime les bullet points */
+    }
 
-footer .nav-link {
-  display: block; /* Meilleure gestion des liens */
-  margin-bottom: 5px; /* Espacement entre les liens */
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+    footer .nav-link {
+      display: block; /* Meilleure gestion des liens */
+      margin-bottom: 5px; /* Espacement entre les liens */
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-footer .nav-link:hover {
-  color: #f0a500; /* Couleur au survol */
-}
+    footer .nav-link:hover {
+      color: #f0a500; /* Couleur au survol */
+    }
 
-footer .section h3 {
-  margin-bottom: 10px; /* Espace entre "Suivez-nous" et les icônes */
-}
-
-footer .social-icons {
-  display: flex;
-  justify-content: center; /* Centrer les icônes horizontalement */
-  gap: 10px; /* Espacement entre les icônes */
-}
-
-footer .social-icons a {
-  font-size: 1.5rem; /* Ajuste la taille des icônes */
-  color: #fff; /* Couleur des icônes */
-  transition: color 0.3s; /* Effet au survol */
-}
-
-footer .social-icons a:hover {
-  color: #f0a500; /* Couleur au survol */
-}
-
-
-footer .legal {
-  width: 100%;
-  text-align: center; /* Centrer le texte de la partie légale */
-  font-size: 0.8rem;
-  margin-top: 10px;
-  border-top: 1px solid #333;
-  padding-top: 10px;
-}
+    footer .legal {
+      width: 100%;
+      text-align: center; /* Centrer le texte de la partie légale */
+      font-size: 0.8rem;
+      margin-top: 10px;
+      border-top: 1px solid #333;
+      padding-top: 10px;
+    }
 
     /* Style pour les petits écrans */
     @media (max-width: 767px) {
@@ -331,25 +292,10 @@ footer .legal {
         color: #ddd !important;
       }
     }
-
   </style>
 </head>
 
 <body>
-
-  <!-- Bannière blanche -->
-  <div class="container-fluid bg-white border-bottom fixed-top top-banner">
-    <div class="row">
-      <div class="col text-right py-1">
-        <a href="https://www.facebook.com/le6iemecontinent" target="_blank" class="social-icons">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/le_6ieme_continent?igsh=dHJpNGdhd3B6aXdo" target="_blank" class="social-icons">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <!-- Bannière noire avec logo centré -->
   <div class="banner_sticky">
@@ -432,7 +378,6 @@ footer .legal {
     &copy; 2025, Le 6ième Continent - Gastronomade | Tous droits réservés – <a href="#">Mentions légales</a>
   </div>
 </footer>
-
 
 
   <!-- Bootstrap JS Bundle avec Popper -->
